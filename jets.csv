@@ -1,5 +1,8 @@
-#type,make,model,speed,range,price
-passenger,cessna,172,200,1500,352000
-ufo,round,100,1200000,94000000
-Fighter
-Cargo
+Passenger,Cessna 172,200,1500,352000
+Ufo,DeathStar,100,1200000,94000000
+Fighter,F16,1319,2622,18800000
+Cargo,C130 Hercules,367,2361,30100000
+Passenger,Cessna 421C,275,1710,425000
+Passenger,Airbus350,560,11184,152000000
+Fighter,F22,1500,1864,125000000
+Compound Helicopter,TriFan 600,390,750,12000000

@@ -1,23 +1,91 @@
 package com.skilldistillery.jets.entities;
 
 public abstract class Jet {
-	String modelName = "Jet";
-	double speedInMilesPerHour = 0.0;
-    int range = 0;
-    long price = 0;
-    
-	public void Jet(String name, double speed, int range, long price) {
-		
+	private String typeOfJet;
+	private String modelName;
+	private double speedInMilesPerHour;
+	private double speedInMach = speedInMilesPerHour * 0.001303;
+	private int range;
+	private long price;
+
+	public Jet() {
+		super();
+
 	}
-	
-	public void flyJet() {
+
+	public Jet(String typeOfJet, String name, double speed, int range, long price) {
+		this.typeOfJet = typeOfJet;
+		this.modelName = name;
+		this.speedInMilesPerHour = speed;
+		this.range = range;
+		this.price = price;
 	}
-	
+
+	public String getTypeOfJet() {
+		return typeOfJet;
+	}
+
+	public void setTypeOfJet(String typeOfJet) {
+		this.typeOfJet = typeOfJet;
+	}
+
 	public double getSpeedInMach() {
-		double mphSpeed = 0.0;
-		double machSpeed = mphSpeed * 0.001303;
-		
-		return machSpeed;
+		return speedInMach;
+	}
+
+	public void setSpeedInMach(double speedInMach) {
+		this.speedInMach = speedInMach;
+	}
+
+	public String getModelName() {
+		return modelName;
+	}
+
+	public void setModelName(String name) {
+		this.modelName = name;
+	}
+
+	public double getSpeedInMilesPerHour() {
+		return speedInMilesPerHour;
+	}
+
+	public void setSpeedInMilesPerHour(double speedInMilesPerHour) {
+		this.speedInMilesPerHour = speedInMilesPerHour;
+	}
+
+	public int getRange() {
+		return range;
+	}
+
+	public void setRange(int range) {
+		this.range = range;
+	}
+
+	public long getPrice() {
+		return price;
+	}
+
+	public void setPrice(long price) {
+		this.price = price;
+	}
+
+	public abstract void fly();
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("This ").append(typeOfJet).append(" jet ").append(modelName).append(" has a speed of ")
+				.append(speedInMilesPerHour).append(" miles per hour.").append("! It can go ").append(range)
+				.append(" before it needs fuel. It's a bargain at just ").append(price).append("!!");
+
+		return builder.toString();
+	}
+
+	public String toStringFly() {
+		StringBuilder builder2 = new StringBuilder();
+		builder2.append(modelName).append(" you are clear for takeoff!");
+
+		return builder2.toString();
 	}
 
 }

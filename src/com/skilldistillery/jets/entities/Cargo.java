@@ -1,11 +1,21 @@
 package com.skilldistillery.jets.entities;
 
-public class Cargo extends Jet {
-	
-	public Cargo() {
-		System.out.println("I'm a cargo plane. I'm slow and I don't fight!");
+public class Cargo extends Jet implements CargoCarrier {
+
+	public Cargo(String type, String name, double speed, int range, long price) {
+		super(type, name, speed, range, price);
 	}
 
-	public void loadJet() {
+	public Cargo() {
+
+	}
+
+	public void fly() {
+		System.out.print(this.getClass().getSimpleName() + ": " + ", Model: " + getModelName() + "\nSpeed: "
+				+ getSpeedInMilesPerHour() + ", Range: " + getRange() + ", Flight Time: ");
+		System.out.printf("%.2f", ((getRange() / getSpeedInMilesPerHour())));
+		System.out.print(" hours.");
+		System.out.println("\nAirborne but slow!\n");
+
 	}
 }
