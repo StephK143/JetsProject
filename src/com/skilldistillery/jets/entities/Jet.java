@@ -9,7 +9,6 @@ public abstract class Jet {
 	private long price;
 
 	public Jet() {
-		
 
 	}
 
@@ -70,8 +69,6 @@ public abstract class Jet {
 		this.price = price;
 	}
 
-	
-	
 	public abstract void fly();
 
 	@Override
@@ -83,9 +80,5 @@ public abstract class Jet {
 
 		return builder.toString();
 	}
-
-	
-
-	
 
 }

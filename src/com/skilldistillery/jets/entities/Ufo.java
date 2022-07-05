@@ -24,7 +24,7 @@ public class Ufo extends Jet implements CombatReady {
 
 	@Override
 	public void fight() {
-		System.out.println("Would you like me to take out the whole planet or just the bad guys...haha!!");
+		System.out.println("I'm the alien in the DeathStar! Would you like me to take out the whole planet or just the bad guys...haha!!");
 
 	}
 

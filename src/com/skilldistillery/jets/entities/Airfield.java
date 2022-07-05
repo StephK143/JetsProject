@@ -214,9 +214,9 @@ public class Airfield {
 
 	public void userSendsTroopsToFight() {
 		for (Jet jets : fleetOfJets) {
-			if(jets instanceof CombatReady) {
+			if (jets instanceof CombatReady) {
 				((CombatReady) jets).fight();
-				
+
 			}
 		}
 

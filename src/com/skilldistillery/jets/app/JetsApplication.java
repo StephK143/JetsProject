@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import com.skilldistillery.jets.entities.Airfield;
 
-
 public class JetsApplication {
 
 	Airfield hanger = new Airfield();

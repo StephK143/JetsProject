@@ -13,22 +13,17 @@ public class Fighter extends Jet implements CombatReady {
 		super();
 	}
 
-
 	public void fly() {
-		System.out.print(this.getClass().getSimpleName() + ": " + ", Model: " + getModelName() + "\nSpeed: " + getSpeedInMilesPerHour() + ", Range: "
-				+ getRange() + ", Flight Time: ");
+		System.out.print(this.getClass().getSimpleName() + ": " + ", Model: " + getModelName() + "\nSpeed: "
+				+ getSpeedInMilesPerHour() + ", Range: " + getRange() + ", Flight Time: ");
 		System.out.printf("%.2f", ((getRange() / getSpeedInMilesPerHour())));
 		System.out.print(" hours.");
 		System.out.println("\nAirborne and ready to fight!\n");
 	}
-	
+
 	public void fight() {
-				System.out.println("Charge!! Pewm, Pewm");
-				
+		System.out.println("I'm a fighter jet! Charge!! Pewm, Pewm");
+
 	}
 
-	
-
-
-	
 }
