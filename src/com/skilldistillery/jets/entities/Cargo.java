@@ -10,6 +10,11 @@ public class Cargo extends Jet implements CargoCarrier {
 
 	}
 
+	@Override
+	public void loadCargo() {
+		System.out.println("Loading cargo for " + this.getModelName());
+	}
+
 	public void fly() {
 		System.out.print(this.getClass().getSimpleName() + ": " + ", Model: " + getModelName() + "\nSpeed: "
 				+ getSpeedInMilesPerHour() + ", Range: " + getRange() + ", Flight Time: ");

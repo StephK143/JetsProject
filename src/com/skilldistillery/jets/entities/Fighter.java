@@ -12,7 +12,7 @@ public class Fighter extends Jet implements CombatReady {
 	public Fighter() {
 		super();
 	}
-//		System.out.println("I am flying out to fight. Pewm...Pewm");
+
 
 	public void fly() {
 		System.out.print(this.getClass().getSimpleName() + ": " + ", Model: " + getModelName() + "\nSpeed: " + getSpeedInMilesPerHour() + ", Range: "
@@ -21,4 +21,14 @@ public class Fighter extends Jet implements CombatReady {
 		System.out.print(" hours.");
 		System.out.println("\nAirborne and ready to fight!\n");
 	}
+	
+	public void fight() {
+				System.out.println("Charge!! Pewm, Pewm");
+				
+	}
+
+	
+
+
+	
 }

@@ -9,11 +9,12 @@ public abstract class Jet {
 	private long price;
 
 	public Jet() {
-		super();
+		
 
 	}
 
 	public Jet(String typeOfJet, String name, double speed, int range, long price) {
+		super();
 		this.typeOfJet = typeOfJet;
 		this.modelName = name;
 		this.speedInMilesPerHour = speed;
@@ -69,6 +70,8 @@ public abstract class Jet {
 		this.price = price;
 	}
 
+	
+	
 	public abstract void fly();
 
 	@Override
@@ -81,11 +84,8 @@ public abstract class Jet {
 		return builder.toString();
 	}
 
-	public String toStringFly() {
-		StringBuilder builder2 = new StringBuilder();
-		builder2.append(modelName).append(" you are clear for takeoff!");
+	
 
-		return builder2.toString();
-	}
+	
 
 }

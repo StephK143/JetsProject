@@ -18,4 +18,14 @@ public class CompoundHelicopter extends Jet implements CombatReady {
 		System.out.println("\nAirborne, Flying to Pandora!\n");
 	}
 
+	public void CombatReady() {
+		System.out.println("Heading out to the fight!");
+	}
+	@Override
+	public void fight() {
+		System.out.println("I took out Pandora, I can take out Earth too!");
+		
+	}
+	
+	
 }

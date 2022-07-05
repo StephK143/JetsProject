@@ -114,10 +114,6 @@ public class Airfield {
 
 	}
 
-	public void userLoadsCargoJet() {
-
-	}
-
 	public void userAddsJet(Scanner kb) {
 
 		String jetType = "";
@@ -206,7 +202,23 @@ public class Airfield {
 
 	}
 
+	public void userLoadsCargoJet() {
+
+		for (Jet jets : fleetOfJets) {
+			if (jets instanceof CargoCarrier) {
+				((CargoCarrier) jets).loadCargo();
+			}
+		}
+
+	}
+
 	public void userSendsTroopsToFight() {
+		for (Jet jets : fleetOfJets) {
+			if(jets instanceof CombatReady) {
+				((CombatReady) jets).fight();
+				
+			}
+		}
 
 	}
 }
